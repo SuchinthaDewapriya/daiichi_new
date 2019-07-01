@@ -10,7 +10,7 @@
         }
         .dropdown-submenu>.dropdown-menu {
            top:0 !important; left:100% !important;
-           margin-top:0px !important;margin-left:2px !important;
+           margin-top:0px !important;margin-left:2px !important; 
         color: #fff !important;
          }
         
@@ -233,22 +233,18 @@
             </ul>
         </li> -->
         <li class="dropdown" >
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #fff; font-weight: bold;"> 売買物件
-               <span class="caret"></span>
-                </a>
-                 <ul class="dropdown-menu" > 
-                {{-- <li><a href="http://www.daiichihome.com/sale/mansion.php?name=新築マンション&name1=中古マンション">マンション</a></li>
-                <li><a href="http://www.daiichihome.com/sale/mansion.php?name=新築戸建て&name1=中古戸建て">戸建</a></li>
-                <li><a href="http://www.daiichihome.com/sale/mansion.php?name=土地">土地</a></li>
-                <li><a href="http://www.daiichihome.com/sale/mansion.php?name=事業用・リゾート">事業用・リゾート</a></li>
-                <li><a href="http://www.daiichihome.com/sale/mansion.php?name=収益物件">収益物件・アパート・ビル</a></li> --}}
-                <li><a href="{{url('/mansion')}}">マンション</a></li>
-                <li><a href="{{url('/mansion')}}">戸建</a></li>
-                <li><a href="{{url('/mansion')}}">土地</a></li>
-                <li><a href="{{url('/mansion')}}">事業用・リゾート</a></li>
-                <li><a href="{{url('/mansion')}}">収益物件・アパート・ビル</a></li>
-            </ul>
-        </li>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #fff; font-weight: bold;"> 売買物件
+         <span class="caret"></span>
+          </a>
+           <ul class="dropdown-menu" > 
+           <li><a href="{{ url('sale-mansion')}}/{{$name='新築マンション'}}/{{$name1='中古マンション'}}">マンション</a></li>
+          <li><a href="{{ url('sale-mansion')}}/{{$name='新築戸建て'}}/{{$name1='中古戸建て'}}">戸建</a></li>
+          <li><a href="{{ url('sale-mansions')}}/{{$name='土地'}}">土地</a></li>
+          <li><a href="{{ url('sale-mansions')}}/{{$name='事業用・リゾート'}}">事業用・リゾート</a></li>
+          <li><a href="{{ url('sale-mansions')}}/{{$name='収益物件'}}">収益物件・アパート・ビル</a></li>
+  
+      </ul>
+  </li>
         <li class="scroll" id="it1"><a href="{{url('/system')}}" style="color: #fff; font-weight: bold;">賃貸管理システム</a></li>
         
         <li class="scroll" id="it1"><a href="#" style="color: #fff; font-weight: bold;">タウン情報

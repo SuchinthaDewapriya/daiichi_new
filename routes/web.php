@@ -70,7 +70,16 @@ Route::post('submitNewNews', 'HomeController@submitNewNews');
 Route::get('deleteNews/{id}', 'HomeController@deleteNews'); 
 Route::post('updateNews/{id}', 'HomeController@updateNews'); 
 
+//Sale Routes
+Route::get('sale-mansion/{name}/{name1}', 'saleController@saleMansion');
+Route::get('sale-mansions/{name}', 'saleController@saleMansions');
+Route::get('locationFilter-sale/{id}', 'saleController@LocationFilterSale'); 
+Route::post('filterData-mansion', 'saleController@filterDataMansion');
+Route::post('filterdatalocation', 'saleController@Filterdatalocation');
 
+Route::post('filterdatamansion', 'frontendController@FilterdataMansion'); 
+Route::post('filterdatarental', 'frontendController@FilterdataRental'); 
+Route::post('filterLocationRental', 'frontendController@filterLocationRental');
 
 
 // test

@@ -331,8 +331,8 @@
        
       <!-- Button to open the modal login form -->
   
-  <!-- The Modal -->
-  <div id="id01" class="modal" >
+  <!-- The Modal --> 
+  <div id="id01" class="modal" style="margin-top:150px;">
       <p align='right'>
           <button align='right' style="font-size: 35px; margin-right: 30px; color: #fff;  background: none; border: none;"  onclick="document.getElementById('id01').style.display='none'">&times;</button>  
       </p>

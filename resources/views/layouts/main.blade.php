@@ -26,6 +26,7 @@
         <script src="{{asset('js/bootstrap.js')}}" charset="utf-8"></script>
         <script src="{{asset('js/custom-js.js')}}" charset="utf-8"></script>
         <script src="{{asset('js/jquery.colorbox.js')}}" charset="utf-8"></script>
+        <script src="{{asset('js/main.js')}}" charset="utf-8"></script>
         <script src="{{asset('js/jssor.slider-27.5.0.min.js')}}" type="text/javascript"></script>
         <script type="text/javascript">
             jssor_1_slider_init = function() {
@@ -96,6 +97,101 @@
                 /*#endregion responsive code end*/
             };
         </script>
+               <style>
+                @media all and (max-width: 1600px) and (min-width: 599px) {
+                    .my-content { display: none;
+                                  overflow:hidden !important;
+                                  visibility: hidden;
+    /*                             margin-top: -2350px;*/
+                    }
+    
+                }
+            </style>
+            <style>
+                @media all and (max-width: 599px) and (min-width: 200px) {
+                    .my-content1 { display: none;
+                                   overflow:hidden !important;
+                                   visibility: hidden;
+                                   position: relative;
+                            }
+                    .fnt{font-size: 9px;}
+                }
+    
+    
+                @media only screen
+                and (min-device-width : 320px)
+                and (max-device-width : 480px) {
+                    .my-content1 { display: none;
+                                   overflow:hidden !important;
+                                   visibility: hidden;
+                                   position: relative;
+    
+                    }
+                    .my-content { display: block;
+                                  overflow:visible !important;
+                                  visibility: visible;
+    
+    
+                    }
+                    .fnt{font-size: 6px;
+                   }
+                   h1{font-size: 30px;}
+    /*                .my-content2{margin-top: -2000px !important;}*/
+    
+                }
+    
+               @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 568px) {
+    .my-content1 { display: none;
+                                   overflow:hidden !important;
+                                   visibility: hidden;
+                                   position: relative;
+    
+                    }
+                    .my-content { display: block;
+                                  overflow:visible !important;
+                                  visibility: visible;
+    
+    
+                    }
+                    .fnt{font-size: 6px;
+                   }
+                   h1{font-size: 30px;}
+    
+                   .slider{padding-right: 100px;}
+    }
+    form{border: none;}
+    .breadcrumb{background: #fff;}
+            </style>
+    
+                <style>
+                    @media all and (max-width: 599px) and (min-width: 320px) {
+                    h3{
+                        font-size: 13px;
+                        font-weight: bold;
+                    }
+                 
+                }
+                   .main_box {
+                    margin: 0px;
+                    padding: 5px;
+                    max-width: 100%;
+                    border-collapse: collapse;
+                    border-spacing: 0px;
+                    border: 1px solid #990000;
+                }
+                
+                
+                
+                .data_box {
+                       
+                    color: #666666;
+                    font-weight: bold;
+                    
+                    
+                }
+                </style>
         <style>
             /*jssor slider loading skin spin css*/
             .jssorl-009-spin img {

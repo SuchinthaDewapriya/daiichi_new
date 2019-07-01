@@ -7,6 +7,282 @@
 
 
  
+<style>
+  .label-default {
+  background-color: #e6e6e6;
+  font-size: 14px;
+  font-weight: 100; 
+  color: #00284d;
+}
+.label-default[href]:hover,
+.label-default[href]:focus {
+  background-color: #5e5e5e;
+}
+form{border: none;}
+.breadcrumb{background: #fff;}
+</style>
+
+
+
+
+  <script language="javascript">
+  document.onmousedown = disableclick;
+  status = "Right Click Disabled";
+  Function disableclick(e)
+  {
+    if(event.button == 2)
+    {
+      alert(status);
+      return false; 
+    }
+  }
+</script>
+ <script language="javascript">
+$(document).keydown(function(event){
+    if(event.keyCode==123){
+    return false;
+   }
+else if(event.ctrlKey && event.shiftKey && event.keyCode==73){        
+      return false;  //Prevent from ctrl+shift+i
+   }
+});
+
+
+document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+//            alert('not allowed');
+            return false;
+        } else {
+            return true;
+        }
+};
+
+
+</script> 
+
+<style>
+form {
+    border: 3px solid #f1f1f1;
+}
+
+.input1 {
+     width: 80%;
+    padding: 18px 18px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.container1 {
+    padding: 26px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+</style>
+
+<style>
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Close button on hover */
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+    </style>
+    
+  <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>  
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script> 
+   
+
+
+    <script>
+    jQuery(function($) {
+  $('#bookmark-this').click(function(e) {
+    var bookmarkURL = window.location.href;
+    var bookmarkTitle = document.title;
+
+    if ('addToHomescreen' in window && addToHomescreen.isCompatible) {
+      // Mobile browsers
+      addToHomescreen({ autostart: false, startDelay: 0 }).show(true);
+    } else if (window.sidebar && window.sidebar.addPanel) {
+      // Firefox <=22
+      window.sidebar.addPanel(bookmarkTitle, bookmarkURL, '');
+    } else if ((window.sidebar && /Firefox/i.test(navigator.userAgent)) || (window.opera && window.print)) {
+      // Firefox 23+ and Opera <=14
+      $(this).attr({
+        href: bookmarkURL,
+        title: bookmarkTitle,
+        rel: 'sidebar'
+      }).off(e);
+      return true;
+    } else if (window.external && ('AddFavorite' in window.external)) {
+      // IE Favorites
+      window.external.AddFavorite(bookmarkURL, bookmarkTitle);
+    } else {
+      // Other browsers (mainly WebKit & Blink - Safari, Chrome, Opera 15+)
+      alert('Press ' + (/Mac/i.test(navigator.userAgent) ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
+    }
+
+    return false;
+  });
+});
+    </script>
+ <style>
+            @media all and (max-width: 1600px) and (min-width: 599px) {
+                .my-content { display: none;
+                              overflow:hidden !important;
+                              visibility: hidden;
+/*                             margin-top: -2350px;*/
+                } 
+
+            }  
+        </style>
+         <style>
+            @media all and (max-width: 599px) and (min-width: 200px) {
+                .my-content1 { display: none;
+                               overflow:hidden !important;
+                               visibility: hidden;
+                               position: relative;
+                        }
+                .fnt{font-size: 9px;}        
+            }
+          
+
+            @media only screen
+            and (min-device-width : 320px)
+            and (max-device-width : 480px) {
+                .my-content1 { display: none;
+                               overflow:hidden !important;
+                               visibility: hidden;
+                               position: relative;
+                        
+                } 
+                .my-content { display: block;
+                              overflow:visible !important;
+                              visibility: visible;
+                             
+                 
+                }
+                .fnt{font-size: 6px;
+               } 
+               h1{font-size: 30px;}
+/*                .my-content2{margin-top: -2000px !important;}*/
+
+            }
+            
+           @media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { 
+.my-content1 { display: none;
+                               overflow:hidden !important;
+                               visibility: hidden;
+                               position: relative;
+                        
+                } 
+                .my-content { display: block;
+                              overflow:visible !important;
+                              visibility: visible;
+                             
+                 
+                }
+                .fnt{font-size: 6px;
+               } 
+               h1{font-size: 30px;}
+               
+               .slider{padding-right: 100px;}
+}
+
+
+
+
+        </style>  
+    
 
 
 
@@ -62,7 +338,7 @@
    <!-- Button to open the modal login form -->
 
 <!-- The Modal -->
-<div id="id01" class="modal" >
+<div id="id01" class="modal" style="margin-top:170px;">
     <p align='right'>
         <button align='right' style="font-size: 35px; margin-right: 30px; color: #fff;  background: none; border: none;"  onclick="document.getElementById('id01').style.display='none'">&times;</button>
     </p>
