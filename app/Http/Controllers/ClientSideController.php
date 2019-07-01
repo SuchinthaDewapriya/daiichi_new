@@ -11,9 +11,9 @@ class ClientSideController extends Controller
 {
     // get sale data
     public function index() {
-        $dataset = sale::all();
+        $dataset = sale::take(8)->get();
         // $apartment_data = apartment::all()->take(4);
-        $apartment_data = apartment::get();
+        $apartment_data = apartment::take(8)->get();
         // dd($apartment_data);
         return view('index',compact('dataset', 'apartment_data'));
 
