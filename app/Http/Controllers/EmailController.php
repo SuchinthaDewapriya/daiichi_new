@@ -48,4 +48,74 @@ class EmailController extends Controller
         Session::flash('success', 'Your Email was Sent!');
         return view('inquire');
     }
+
+    // sales
+    public function saleData (Request $request) {
+        $this->validate($request, [
+            'pro_name' => 'required',
+            'pro_location' => 'required',
+            'content' => 'required',
+            'contact_method' => 'required',
+            'name' => 'required',
+            'email' => 'email|required',
+            'phone' => 'required',
+            'fax' => 'required'
+        ]);
+        $data = array (
+            'pro_name' => $request->pro_name,
+            'pro_location' => $request->pro_location,
+            'content' => $request->content,
+            'contact_method' => $request->contact_method,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'fax' => $request->fax
+        );
+
+        Mail::send('emails.salesEmail', $data, function($message) use ($data) {
+            $message->from($data['email']);
+            $message->to('sunwebjapan.tinith@gmail.com');
+            $message->replyTo($data['email']);
+            $message->subject($data['name']);
+        });
+
+        Session::flash('success', 'Your Email was Sent!');
+        return back();
+    }
+
+    // apartment data
+    public function apartmentData (Request $request) {
+        // return $request;
+
+        $this->validate($request, [
+            'pro_name' => 'required',
+            'pro_location' => 'required',
+            'content' => 'required',
+            'contact_method' => 'required',
+            'name' => 'required',
+            'email' => 'email|required',
+            'phone' => 'required',
+            'fax' => 'required'
+        ]);
+        $data = array (
+            'pro_name' => $request->pro_name,
+            'pro_location' => $request->pro_location,
+            'content' => $request->content,
+            'contact_method' => $request->contact_method,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'fax' => $request->fax
+        );
+
+        Mail::send('emails.apartmentEmail', $data, function($message) use ($data) {
+            $message->from($data['email']);
+            $message->to('sunwebjapan.tinith@gmail.com');
+            $message->replyTo($data['email']);
+            $message->subject($data['name']);
+        });
+
+        Session::flash('success', 'Your Email was Sent!');
+        return back();
+    }
 }
