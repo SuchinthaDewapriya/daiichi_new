@@ -180,13 +180,13 @@
       <tr>
           <th style="background: #d9e8f7; color:#4d4d4d; border: 1px solid #bbb;">お問合わせ内容</th>
           <td style=" border: 1px solid #bbb;"> 
-             <input type='checkbox' name='content1' value='売りたい'> &nbsp;売りたい &nbsp;&nbsp;&nbsp;
-             <input type='checkbox' name='content2' value='買いたい'>&nbsp;買いたい &nbsp;&nbsp;&nbsp;
-             <input type='checkbox' name='content3' value='借りたい'>&nbsp;借りたい &nbsp;<br>
-             <input type='checkbox' name='content4' value='リフォーム'>&nbsp;リフォーム &nbsp;&nbsp;&nbsp;
-             <input type='checkbox' name='content5' value='建て替え'>&nbsp;建て替え &nbsp;&nbsp;&nbsp;
-             <input type='checkbox' name='content6' value='新築 '>&nbsp;新築 &nbsp;&nbsp;&nbsp;
-             <input type='checkbox' name='content7' value='その他 '>&nbsp;その他 
+             <input type='checkbox' name='content[]' value='売りたい'> &nbsp;売りたい &nbsp;&nbsp;&nbsp;
+             <input type='checkbox' name='content[]' value='買いたい'>&nbsp;買いたい &nbsp;&nbsp;&nbsp;
+             <input type='checkbox' name='content[]' value='借りたい'>&nbsp;借りたい &nbsp;<br>
+             <input type='checkbox' name='content[]' value='リフォーム'>&nbsp;リフォーム &nbsp;&nbsp;&nbsp;
+             <input type='checkbox' name='content[]' value='建て替え'>&nbsp;建て替え &nbsp;&nbsp;&nbsp;
+             <input type='checkbox' name='content[]' value='新築 '>&nbsp;新築 &nbsp;&nbsp;&nbsp;
+             <input type='checkbox' name='content[]' value='その他 '>&nbsp;その他 
          </td>
      </tr>
   

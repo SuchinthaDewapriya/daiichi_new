@@ -11,6 +11,8 @@ class EmailController extends Controller
     public function inquireData(Request $request) {
         // return $request;
          // dd($request);
+        //  $content = $request->content1.' / '.$request->content2.' / '.$request->content3.' / '.$request->content4.' / '.$request->content5.' / '.$request->content6.' / '.$request->content7;
+        
          $this->validate($request, [
             'name' => 'required',
             'phonetic' => 'required',
@@ -19,11 +21,10 @@ class EmailController extends Controller
             'emailConfirm' => 'required|email',
             'post_code' => 'required|min:3',
             'address' => 'required|min:5',
-            'content1' => 'required',
+            'content' => 'required',
             'inquire' => 'required',
             'confirm' => 'required'
         ]);
-
         $data = array (
             'name' => $request->name,
             'phonetic' => $request->phonetic,
@@ -32,7 +33,7 @@ class EmailController extends Controller
             'emailConfirm' => $request->emailConfirm,
             'post_code' => $request->post_code,
             'address' => $request->address,
-            'content1' => $request->content1,
+            'content' => $request->content,
             'inquire' => $request->inquire,
             'confirm' => $request->confirm,
         );

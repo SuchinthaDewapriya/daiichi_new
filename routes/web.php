@@ -76,14 +76,3 @@ Route::post('updateNews/{id}', 'HomeController@updateNews');
 
 
 
-<<<<<<< HEAD
-=======
-
-// test
-// Route::get('/sales', function () {
-//     return view('includes.sales-slider');
-// });
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> 4d7050f01210428543e7de584ec661d4fce1364d

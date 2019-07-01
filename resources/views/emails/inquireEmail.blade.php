@@ -5,7 +5,11 @@
     <p><b>Phone   : </b> {{$phone}}</p>
     <p><b>Post Code   : </b> {{$post_code}}</p>
     <p><b>Address   : </b> {{$address}}</p>
-    <p><b>Contents  : </b> {{$content1}}</p>
+    <p><b>Contents  : </b>
+    @foreach ($content as $item)
+        {{$item}} <br>
+    @endforeach
+    </p>
     <p><b>Inquire   : </b> {{$inquire}}</p>
     <p><b>Confirm   : </b> {{$confirm}}</p>
 
