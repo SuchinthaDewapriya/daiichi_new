@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    {{-- @include('includes.menu')  --}}
+    {{-- @include('includes.menu')  --}} 
     <div style="margin-top: 148px;"></div>
     @include('includes.carousel')
 
@@ -99,22 +99,22 @@
                         <p><b>エリア別売買物件 </b></p>
                         <div style="background-image: url(images/sale_map1.png); margin-left: 120px; height: 220px; background-repeat: no-repeat;" align="center">
                             <section style="margin-left: -100px; padding-top: 50px;">
-                                <b><a href="location_filtersale/location_2.php?col=city&name=<twn1; ?>&db=sale" target="_blank" style="text-decoration: none;color: #000000;" >成田中心部エリア  </a></b> 
+                                <b><a href="{{ url('locationFilter-sale')}}/{{$id='成田中心部エリア'}}" target="_blank" style="text-decoration: none;color: #000000;" > 成田中心部エリア  </a></b> 
                             </section>
                             <section style="margin-left: -220px; padding-top: 15px;">
-                                <b><a href="location_filtersale/location_2.php?col=city&name=echo $twn2; &db=sale" target="_blank" style="text-decoration: none;color: #000000;">酒々井エリア </a></b>
+                                <b><a href="{{ url('locationFilter-sale')}}/{{$id='酒々井エリア'}}" target="_blank" style="text-decoration: none;color: #000000;">酒々井エリア </a></b>
                             </section>
                             <section style="padding-top: 10px; margin-left: -50px;">
-                                <b><a href="location_filtersale/location_2.php?col=city&name=$twn3; ?>&db=sale" target="_blank" style="text-decoration: none;color: #000000;">冨里エリア</a> </b>
+                                <b><a href="{{ url('locationFilter-sale')}}/{{$id='冨里エリア'}}" target="_blank" style="text-decoration: none;color: #000000;">冨里エリア</a> </b>
                             </section>
                             <label style="padding-top: 5px; margin-top: 5px; margin-left: -190px;">
-                                <b><a href="location_filtersale/location_2.php?col=city&name=$twn4; ?>&db=sale" target="_blank" style="text-decoration: none;color: #000000;">佐倉エリア </a></b> 
+                                <b><a href="{{ url('locationFilter-sale')}}/{{$id='佐倉エリア'}}" target="_blank" style="text-decoration: none;color: #000000;">佐倉エリア </a></b> 
                             </label> <br><br>
                             <span style=" margin-left: -150px;">
-                                <b><a href="location_filtersale/location_2.php?col=city&name=$twn5; ?>&db=sale" target="_blank" style="text-decoration: none;color: #000000;">八街エリア </a> </b> 
+                                <b><a href="{{ url('locationFilter-sale')}}/{{$id='八街エリア'}}" target="_blank" style="text-decoration: none;color: #000000;">八街エリア </a> </b> 
                             </span>
                             <p style="margin-left: 70px;">
-                                <b><a href="location_filtersale/location_2.php?col=city&name=twn6; ?>&db=sale" target="_blank" style="text-decoration: none;color: #000000;">その他エリア  </a></b>
+                                <b><a href="{{ url('locationFilter-sale')}}/{{$id='その他エリア'}}" target="_blank" style="text-decoration: none;color: #000000;">その他エリア  </a></b>
                             </p>
                         </div>
                     </div>

@@ -16,7 +16,7 @@ class adminLoginController extends Controller
     }
     public function refreshCaptcha()
     {
-        $html = captcha_img() . '';
+        $html = captcha_img('flat') . '';
         
         return response()->json(['captcha'=>$html]);
     }

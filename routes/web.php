@@ -14,6 +14,8 @@
 // Route::get('/', function () {
 //     return view('index');
 // });
+Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
 Route::get('/rental_category', function () {
     return view('rental_category');
 });
@@ -51,7 +53,7 @@ Route::get('/ApartmentViewData/{id}', 'ClientSideController@ApartmentViewData');
 // inquire
 Route::post('/inquireData', 'EmailController@inquireData');
 //Admin Routes
-Route::get('/adminLogin', 'adminLoginController@AdminLogin'); 
+Route::get('adminLogin', [ 'as' => 'adminLogin', 'uses' => 'adminLoginController@AdminLogin']); 
 
 Route::get('refresh_captcha', 'adminLoginController@refreshCaptcha'); 
 Route::post('cutomlogin', 'frontendController@CustomLogin'); 
