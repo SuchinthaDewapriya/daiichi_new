@@ -18,7 +18,7 @@
             @php
                 $news = DB::table('news')->get();
             @endphp
-            @if ($news == "")
+            @if (count($news) == 0)
                 <p>No records matching your query were found.</p>
             @else
                 <div class="panel panel-default"> 
