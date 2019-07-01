@@ -228,7 +228,7 @@
 
       <div class="row fnt">
           <p style="color: #BD2C61; padding-left: 20px;"><b> {{$apartmentdata->property_type}}</b> <span style="padding-left: 20px;"> {{$apartmentdata->flag_display}}</span><br>
-            <b><?php echo $row1['property_name'];  ?></b>
+            <b>{{$apartmentdata->property_type}}</b>
         </p>
       </div>
 
@@ -421,39 +421,39 @@
     <tbody>
     <div>
         <tr >
-            <th  style="color:#fff;background: #BE2E62; min-width: 120px; ">賃料</th>
-      <td colspan="3"  style="color:#BE2E62;  ">{{$apartmentdata->property_type}}  '円'</td>
+            <th  style="color:#fff;background: #BE2E62; min-width: 120px; "> </th>
+      <td colspan="3"  style="color:#BE2E62;  ">{{$apartmentdata->price}}  '円'</td>
     </tr>
 
     <tr>
       <th  scope="row" style="color:#fff;background: #BE2E62; width: 25% ">敷金・礼金</th>
-      <td  colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td  colspan="3"style="color:#BE2E62;">{{$apartmentdata->road_situation}}</td>
     </tr>
 
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">管理費など </th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}} '円' </td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->location}} '円' </td>
     </tr>
 
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">所在地</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->nearst_station}}</td>
     </tr>
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">最寄駅</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->floor_type}}</td>
     </tr>
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">間取</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->building_area}}</td>
     </tr>
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">専有面積</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}} <sup>2</sup></td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->land_area}} <sup>2</sup></td>
     </tr>
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">築年月</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->built_years}}</td>
     </tr>
 
 
@@ -462,89 +462,89 @@
 
      <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">交通機関</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->transpotation}}</td>
 
     </tr>
 
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">間取詳細</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->floor_plan}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">所在階/階数</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->whereabouts_floor}}</td>
 
     </tr>
 
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">建物構造</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->building_structure}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">バルコニー面積</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->land_rights}}</td>
 
     </tr>
       <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">主要採光面</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->repair_reserve}}</td>
 
     </tr>
      <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">契約期間</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->urban_planning}}</td>
 
     </tr>
       <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">住宅保険料/期間</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->land_category}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">償却・敷引</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->use_district}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">更新料</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->building_coverage}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">現況</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->current_state}}</td>
 
     </tr>
 
       <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">引渡</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->delivery}}</td>
 
     </tr>
 
      <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">駐車場</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->parking_lot}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">ポイント</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->point}}</td>
 
     </tr>
 
 
                 <tr>
                     <th scope="row" style="color:#BE2E62; width: 25% ">設備・条件</th>
-                    <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+                    <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->facilities_conditions}}</td>
 
                 </tr>
 
                 <tr>
                     <th scope="row" style="color:#BE2E62; width: 25% ">備考</th>
-                    <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+                    <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->remarks}}</td>
 
                 </tr>
 
@@ -562,38 +562,38 @@
     <div>
         <tr >
             <th  style="color:#fff;background: #BE2E62; width: 25% ">賃料</th>
-      <td colspan="3"  style="color:#BE2E62;  ">{{$apartmentdata->property_type}} '円'</td>
+      <td colspan="3"  style="color:#BE2E62;  ">{{$apartmentdata->price}} '万円'</td>
     </tr>
 
     <tr>
       <th  scope="row" style="color:#fff;background: #BE2E62; width: 25% ">敷金・礼金</th>
-      <td  colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td  colspan="3"style="color:#BE2E62;">{{$apartmentdata->road_situation}}</td>
     </tr>
 
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">管理費など</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}} '円'</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->location}} '円'</td>
     </tr>
 
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">所在地</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->nearst_station}}</td>
     </tr>
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">最寄駅</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->floor_type}}</td>
     </tr>
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">間取</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->building_area}}</td>
     </tr>
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">専有面積</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}} m<sup>2</sup></td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->land_area}} m<sup>2</sup></td>
     </tr>
     <tr>
       <th scope="row" style="color:#fff;background: #BE2E62; width: 25% ">築年月</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->built_years}}</td>
     </tr>
 
 
@@ -602,89 +602,89 @@
 
      <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">交通機関</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->transpotation}}</td>
 
     </tr>
 
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">間取詳細</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->floor_plan}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">所在階/階数</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->whereabouts_floor}}</td>
 
     </tr>
 
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">建物構造</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->building_structure}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">バルコニー面積</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->land_rights}}</td>
 
     </tr>
       <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">主要採光面</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->repair_reserve}}</td>
 
     </tr>
      <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">契約期間</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->urban_planning}}</td>
 
     </tr>
       <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">住宅保険料/期間</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->land_category}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">償却・敷引</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->use_district}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">更新料</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->building_coverage}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">現況</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->current_state}}</td>
 
     </tr>
 
       <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">引渡</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->delivery}}</td>
 
     </tr>
 
      <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">駐車場</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->parking_lot}}</td>
 
     </tr>
     <tr>
       <th scope="row" style="color:#BE2E62; width: 25% ">ポイント</th>
-      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+      <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->point}}</td>
 
     </tr>
 
 
                 <tr>
                     <th scope="row" style="color:#BE2E62; width: 25% ">設備・条件</th>
-                    <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+                    <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->facilities_conditions}}</td>
 
                 </tr>
 
                 <tr>
                     <th scope="row" style="color:#BE2E62; width: 25% ">備考</th>
-                    <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->property_type}}</td>
+                    <td colspan="3"style="color:#BE2E62;">{{$apartmentdata->remarks}}</td>
 
                 </tr>
 
