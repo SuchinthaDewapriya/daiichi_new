@@ -99,6 +99,13 @@
   </head>
   
   <body oncontextmenu="return false" id="body">
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">X</button>
+        <strong>{{$message}}</strong>
+    </div>
+        
+    @endif
 
       <div style="margin-top: 280px;"></div>
   
@@ -113,8 +120,8 @@
                       <p style=" font-size: 12px; line-height: 25px;">下記フォームの項目に内容をご記入して送信してください。<br>
                       何でもお気軽にお問合わせ下さい。</p>
   
-                      <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" name="form1" id="form1" method="POST" enctype="multipart/form-data" style="border: none;">
-  
+                      <form action="{{url('/inquireData')}}" name="form1" id="form1" method="POST" enctype="multipart/form-data" style="border: none;">
+                        {{ csrf_field() }}
                           <table class="table table-bordered"  >
                               <tbody>
                                   <tr >
@@ -173,13 +180,13 @@
       <tr>
           <th style="background: #d9e8f7; color:#4d4d4d; border: 1px solid #bbb;">お問合わせ内容</th>
           <td style=" border: 1px solid #bbb;"> 
-             <input type='checkbox' name='content1' value='売りたい'> &nbsp;売りたい &nbsp;&nbsp;&nbsp;
-             <input type='checkbox' name='content2' value='買いたい'>&nbsp;買いたい &nbsp;&nbsp;&nbsp;
-             <input type='checkbox' name='content3' value='借りたい'>&nbsp;借りたい &nbsp;<br>
-             <input type='checkbox' name='content4' value='リフォーム'>&nbsp;リフォーム &nbsp;&nbsp;&nbsp;
-             <input type='checkbox' name='content5' value='建て替え'>&nbsp;建て替え &nbsp;&nbsp;&nbsp;
-             <input type='checkbox' name='content6' value='新築 '>&nbsp;新築 &nbsp;&nbsp;&nbsp;
-             <input type='checkbox' name='content7' value='その他 '>&nbsp;その他 
+             <input type='checkbox' name='content[]' value='売りたい'> &nbsp;売りたい &nbsp;&nbsp;&nbsp;
+             <input type='checkbox' name='content[]' value='買いたい'>&nbsp;買いたい &nbsp;&nbsp;&nbsp;
+             <input type='checkbox' name='content[]' value='借りたい'>&nbsp;借りたい &nbsp;<br>
+             <input type='checkbox' name='content[]' value='リフォーム'>&nbsp;リフォーム &nbsp;&nbsp;&nbsp;
+             <input type='checkbox' name='content[]' value='建て替え'>&nbsp;建て替え &nbsp;&nbsp;&nbsp;
+             <input type='checkbox' name='content[]' value='新築 '>&nbsp;新築 &nbsp;&nbsp;&nbsp;
+             <input type='checkbox' name='content[]' value='その他 '>&nbsp;その他 
          </td>
      </tr>
   
