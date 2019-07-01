@@ -29,6 +29,6 @@ class ClientSideController extends Controller
     // apartment view data 
     public function ApartmentViewData($id) {
         $apartmentdata = apartment::find($id);
-        return view('apartment-details', compact('apartmentdata'));
+        return view('apartment-details', compact('apartmentdata'))->with('id', $id);
     }
 }
