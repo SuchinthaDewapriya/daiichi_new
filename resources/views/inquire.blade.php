@@ -99,6 +99,13 @@
   </head>
   
   <body oncontextmenu="return false" id="body">
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">X</button>
+        <strong>{{$message}}</strong>
+    </div>
+        
+    @endif
 
       <div style="margin-top: 280px;"></div>
   
@@ -113,8 +120,8 @@
                       <p style=" font-size: 12px; line-height: 25px;">下記フォームの項目に内容をご記入して送信してください。<br>
                       何でもお気軽にお問合わせ下さい。</p>
   
-                      <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" name="form1" id="form1" method="POST" enctype="multipart/form-data" style="border: none;">
-  
+                      <form action="{{url('/inquireData')}}" name="form1" id="form1" method="POST" enctype="multipart/form-data" style="border: none;">
+                        {{ csrf_field() }}
                           <table class="table table-bordered"  >
                               <tbody>
                                   <tr >

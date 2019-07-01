@@ -42,16 +42,15 @@ Route::get('/inquire', function () {
     return view('inquire');
 });
 
+
+// client handling
 Route::get('/', 'ClientSideController@index');
 Route::get('/SalesViewData/{id}', 'ClientSideController@SalesViewData');
 Route::get('/ApartmentViewData/{id}', 'ClientSideController@ApartmentViewData');
 
+// inquire
+Route::post('/inquireData', 'EmailController@inquireData');
 
 
 
 
-
-// test
-// Route::get('/sales', function () {
-//     return view('includes.sales-slider');
-// });
