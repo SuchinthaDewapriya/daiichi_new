@@ -339,9 +339,9 @@
     <!-- Modal Content -->
   <div class="modal-content animate">
     <!-- form                       -->
-    <form  method="POST" name="contact_form" action="data">
+    <form  method="POST" name="contact_form" action="{{('/saleData')}}">
      
-  
+  {{ csrf_field() }}
       <div class="container1">
           <div class="row">
               <div class="col-sm-12">
@@ -357,10 +357,10 @@
               <div class="col-sm-10" align="left">
                   <div class="form-group">
                       <p style="border: 1px solid #ccc; padding: 7px; background: #F2F2F2; border-radius: 4px; max-width: 430px; margin-left: 105px;">
-                          <span align="left">data - data</span>
+                          <span align="left">{{$saledata->property_type}} - {{$saledata->flag_display}}</span>
                       </p>
                      
-                       <input type="hidden" style="color:#00284d;" class="form-control input1" id="pro_name" placeholder="" value='data - data' name="pro_name" readonly="">
+                       <input type="hidden" style="color:#00284d;" class="form-control input1" id="pro_name" placeholder="" value='{{$saledata->property_type}} - {{$saledata->flag_display}}' name="pro_name" readonly="">
                   </div> 
               </div>   
           </div>   
@@ -373,9 +373,9 @@
              <div class="col-sm-10" align="left">
                 <div class="form-group">
                     <p style="border: 1px solid #ccc; padding: 7px; background: #F2F2F2; border-radius: 4px; max-width: 430px; margin-left: 105px;">
-                        <span align="left">data</span>
+                        <span align="left">{{$saledata->location}}</span>
                     </p>
-                    <input type="hidden" class="form-control input1" id="pro_location" placeholder="" value='data' name="pro_location" readonly="">
+                    <input type="hidden" class="form-control input1" id="pro_location" placeholder="" value='{{$saledata->location}}' name="pro_location" readonly="">
                 </div> 
               </div>         
               
@@ -388,10 +388,10 @@
               
               <div class="col-sm-10">
                    <div class="form-group" align="left" style="margin-left: 120px;">
-                      <input type="checkbox" id="content1"  value='物件を見たい' name="content1"> &nbsp; 物件を見たい<br>
-                      <input type="checkbox" id="content2"  value=' 物件について詳しく知りたい' name="content2"> &nbsp;  物件について詳しく知りたい<br>
-                      <input type="checkbox" id="content3"  value='購入に関して相談がしたい ' name="content3"> &nbsp; 購入に関して相談がしたい<br>
-                      <input type="checkbox" id="content4"  value='資料を送ってほしい ' name="content4"> &nbsp; 資料を送ってほしい<br>
+                      <input type="checkbox" id="content1"  value='物件を見たい' name="content[]"> &nbsp; 物件を見たい<br>
+                      <input type="checkbox" id="content2"  value=' 物件について詳しく知りたい' name="content[]"> &nbsp;  物件について詳しく知りたい<br>
+                      <input type="checkbox" id="content3"  value='購入に関して相談がしたい ' name="content[]"> &nbsp; 購入に関して相談がしたい<br>
+                      <input type="checkbox" id="content4"  value='資料を送ってほしい ' name="content[]"> &nbsp; 資料を送ってほしい<br>
                       <br>
                                     備考欄 <br>
                     （その他にご質問等ございましたらご記入ください。）

@@ -344,8 +344,8 @@ and (max-device-width : 568px) {
     </p>
   <!-- Modal Content -->
 <div class="modal-content animate">
-    <form  method="POST" name="contact_form" action="">
-
+    <form  method="POST" name="contact_form" action="{{('/apartmentData')}}">
+{{ csrf_field() }}
 
     <div class="container1">
         <div class="row">
@@ -393,10 +393,10 @@ and (max-device-width : 568px) {
 
             <div class="col-sm-10">
                  <div class="form-group" align="left" style="margin-left: 120px;">
-                <input type="checkbox" id="content1"  value='物件を見たい' name="content1"> &nbsp; 物件を見たい <br>
-                <input type="checkbox" id="content2"  value='物件について詳しく知りたい' name="content2"> &nbsp; 物件について詳しく知りたい <br>
-                <input type="checkbox" id="content3"  value=' 購入に関して相談がしたい ' name="content3"> &nbsp;  購入に関して相談がしたい<br>
-                <input type="checkbox" id="content4"  value='資料を送ってほしい ' name="content4"> &nbsp; 資料を送ってほしい <br>
+                <input type="checkbox" id="content1"  value='物件を見たい' name="content[]"> &nbsp; 物件を見たい <br>
+                <input type="checkbox" id="content2"  value='物件について詳しく知りたい' name="content[]"> &nbsp; 物件について詳しく知りたい <br>
+                <input type="checkbox" id="content3"  value=' 購入に関して相談がしたい ' name="content[]"> &nbsp;  購入に関して相談がしたい<br>
+                <input type="checkbox" id="content4"  value='資料を送ってほしい ' name="content[]"> &nbsp; 資料を送ってほしい <br>
                 <br>
                 備考欄 <br>（その他にご質問等ございましたらご記入ください。）
 

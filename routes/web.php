@@ -50,8 +50,14 @@ Route::get('/', 'ClientSideController@index');
 Route::get('/SalesViewData/{id}', 'ClientSideController@SalesViewData');
 Route::get('/ApartmentViewData/{id}', 'ClientSideController@ApartmentViewData');
 
-// inquire
+// emails 
 Route::post('/inquireData', 'EmailController@inquireData');
+Route::post('/saleData', 'EmailController@saleData');
+Route::post('/apartmentData', 'EmailController@apartmentData');
+
+
+
+
 //Admin Routes
 Route::get('adminLogin', [ 'as' => 'adminLogin', 'uses' => 'adminLoginController@AdminLogin']); 
 
