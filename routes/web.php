@@ -46,7 +46,29 @@ Route::get('/', 'ClientSideController@index');
 Route::get('/SalesViewData/{id}', 'ClientSideController@SalesViewData');
 Route::get('/ApartmentViewData/{id}', 'ClientSideController@ApartmentViewData');
 
+//Admin Routes
+Route::get('/adminLogin', 'adminLoginController@AdminLogin'); 
 
+Route::get('refresh_captcha', 'adminLoginController@refreshCaptcha'); 
+Route::post('cutomlogin', 'frontendController@CustomLogin'); 
+Route::get('rental-information', 'HomeController@RentalInformation'); 
+Route::post('newrental', 'HomeController@NewRental'); 
+Route::get('edit-rental/{idd}', 'HomeController@EditRental');
+Route::post('update-rental', 'HomeController@UpdateRental'); 
+Route::get('deleterental/{id}', 'HomeController@Deleterental'); 
+
+Route::get('sale-information', 'HomeController@SaleInformation'); 
+Route::post('newsale', 'HomeController@NewSale'); 
+Route::get('edit-sale/{idd}', 'HomeController@EditSale');
+Route::post('update-sale', 'HomeController@UpdateSale');
+Route::get('deletesale/{id}', 'HomeController@Deletesale'); 
+Route::post('newNews', 'HomeController@newNews');  
+Route::get('news', 'HomeController@News');  
+Route::get('newsEdit/{id}', 'HomeController@NewsEdit');  
+Route::get('addnewNews', 'HomeController@addnewNews'); 
+Route::post('submitNewNews', 'HomeController@submitNewNews'); 
+Route::get('deleteNews/{id}', 'HomeController@deleteNews'); 
+Route::post('updateNews/{id}', 'HomeController@updateNews'); 
 
 
 
@@ -55,3 +77,6 @@ Route::get('/ApartmentViewData/{id}', 'ClientSideController@ApartmentViewData');
 // Route::get('/sales', function () {
 //     return view('includes.sales-slider');
 // });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
