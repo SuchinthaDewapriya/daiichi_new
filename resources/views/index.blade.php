@@ -15,13 +15,33 @@
         </div>
 
         <div class="col-sm-9" style="margin-top: 10px;">
-            {{-- data from news --}}
-            <br><br><br><br>
-            {{-- <div class="panel panel-default" >  
-                <div class="panel-body" style="height: 180px;overflow-y: hidden;">
-                    <h2>data from news</h2>
-                </div>
-            </div> --}}
+            @php
+                $news = DB::table('news')->get();
+            @endphp
+            @if ($news == "")
+                <p>No records matching your query were found.</p>
+            @else
+                <div class="panel panel-default"> 
+                    
+                    <div class="panel-body" style="height: 180px;overflow-y: hidden;">
+                            @foreach ($news as $item)
+                            @php
+                                $date=date('Y-m-d', strtotime($item->date));
+                            @endphp
+                            <p style='font-size: 15px; color: #000; height:5px; '> 
+                                {{$date}} &nbsp;
+                                @php
+                                    echo (!empty($item->link) ? "<a href='" .$item->link."' target='_blank'>" . $item->news . " </a>" :  $item->news);
+                                @endphp
+                                </p>
+                                <hr>
+                                @endforeach 
+                            </div>
+                            
+                        </div> 
+                        
+            @endif
+            
         </div>
 
     </div>  
