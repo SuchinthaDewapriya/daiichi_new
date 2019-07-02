@@ -188,7 +188,7 @@
     </div>
     {{-- div3 close ------------------------------------------------------------------------------- --}}
     <div class="container-edit">
-        <a href="all_saleapartment.php"><h4 align="right">See more >></h4></a>
+            <a href="{{url('/all_saleapartment')}}"><h4 align="right">See more >></h4></a>
     </div>
     <br>
     {{-- -------------- see more close ---------------------- --}}
@@ -229,8 +229,9 @@
             </div>    
             @endforeach
         </div>
+        <br><br>
         <div class="container-edit">
-            <a href="all_rentapartment.php"><h4 align="right">See more >></h4></a>
+            <a href="{{url('/all_rentapartment')}}"><h4 align="right">See more >></h4></a>
         </div>
     </div>
     <br>
