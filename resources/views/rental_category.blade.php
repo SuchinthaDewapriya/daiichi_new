@@ -67,9 +67,9 @@
                                 <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">エリア
                                     <span class="caret"></span></button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="new" href="rental_list.php?name=酒々井エリア&cat=twon">酒々井エリア</a></li>
-                                        <li><a class="new" href="rental_list.php?name=佐倉エリア&cat=twon">佐倉エリア</a></li>
-                                        <li><a class="new" href="rental_list.php?name=その他エリア&cat=twon">その他エリア</a></li>
+                                        <li><a class="new" href="{{ url('rental_list')}}/{{$name='酒々井エリア'}}/{{$cat='twon'}}">酒々井エリア</a></li>
+                                        <li><a class="new" href="{{ url('rental_list')}}/{{$name='佐倉エリア'}}/{{$cat='twon'}}">佐倉エリア</a></li>
+                                        <li><a class="new" href="{{ url('rental_list')}}/{{$name='その他エリア'}}/{{$cat='twon'}}">その他エリア</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -79,18 +79,18 @@
                                     <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">最寄駅
                                         <span class="caret"></span></button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="new" href="rental_list.php?name=京成酒々井&cat=nearst_station">京成酒々井</a></li>
-                                            <li><a class="new" href="rental_list.php?name=京成佐倉&cat=nearst_station">京成佐倉</a></li>
-                                            <li><a class="new" href="rental_list.php?name=公津の杜&cat=nearst_station">公津の杜</a></li>
-                                            <li><a class="new" href="rental_list.php?name=JR酒々井&cat=nearst_station">JR酒々井</a></li>
-                                            <li><a class="new" href="rental_list.php?name=JR佐倉&cat=nearst_station">JR佐倉</a></li>
-                                            <li><a class="new" href="rental_list.php?name=JR榎戸駅&cat=nearst_station">JR榎戸駅</a></li>
-                                            <li><a class="new" href="rental_list.php?name=JR八街駅&cat=nearst_station">JR八街駅</a></li>
-                                            <li><a class="new" href="rental_list.php?name=JR南酒々井駅&cat=nearst_station">JR南酒々井駅</a></li>
-                                            <li><a class="new" href="rental_list.php?name=JR成田駅&cat=nearst_station">JR成田駅</a></li>
-                                            <li><a class="new" href="rental_list.php?name=京成宗吾参道駅&cat=nearst_station">京成宗吾参道駅</a></li>
-                                            <li><a class="new" href="rental_list.php?name=京成成田駅&cat=nearst_station">京成成田駅</a></li>
-                                            <li><a class="new" href="rental_list.php?name=京成大佐倉駅&cat=nearst_station">京成大佐倉駅</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='京成酒々井'}}/{{$cat='nearst_station'}}">京成酒々井</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='京成佐倉'}}/{{$cat='nearst_station'}}">京成佐倉</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='公津の杜'}}/{{$cat='nearst_station'}}">公津の杜</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='JR酒々井'}}/{{$cat='nearst_station'}}">JR酒々井</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='JR佐倉'}}/{{$cat='nearst_station'}}">JR佐倉</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='JR榎戸駅'}}/{{$cat='nearst_station'}}">JR榎戸駅</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='JR八街駅'}}/{{$cat='nearst_station'}}">JR八街駅</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='JR南酒々井駅'}}/{{$cat='nearst_station'}}">JR南酒々井駅</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='JR成田駅'}}/{{$cat='nearst_station'}}">JR成田駅</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='京成宗吾参道駅'}}/{{$cat='nearst_station'}}">京成宗吾参道駅</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='京成成田駅'}}/{{$cat='nearst_station'}}">京成成田駅</a></li>
+                                            <li><a class="new" href="{{ url('rental_list')}}/{{$name='京成大佐倉駅'}}/{{$cat='nearst_station'}}">京成大佐倉駅</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -104,35 +104,35 @@
     
     
                                 <div class="col-md-2 col-sm-6 col-xs-12" id="p5" >
-                                    <a id="img1" href="rental_list.php?name=新築・築浅&cat=construction">
+                                    <a id="img1" href="{{ url('rental_list')}}/{{$name='新築・築浅'}}/{{$cat='construction'}}">
                                     <img src="images/sub/05.png" class="img-responsive"/>
                                     <h4 style="color: #009966; font-weight: bold;">新築・築浅</h4>
                                     </a>
                                 </div>
     
                                 <div id="img2" class="col-md-2 col-sm-6 col-xs-12" id="p2">
-                                    <a href="rental_list.php?name=駅近物件&cat=pronear_station">
+                                    <a href="{{ url('rental_list')}}/{{$name='駅近物件'}}/{{$cat='pronear_station'}}">
                                     <img src="images/sub/02.png" class="img-responsive"/>
                                     <h4 style="color: #009966; font-weight: bold;">駅近物件</h4>
                                     </a>
                                 </div>
     
                                 <div id="img3" class="col-md-2 col-sm-6 col-xs-12" id="p3">
-                                    <a href="rental_list.php?name=ペットも同居&cat=pets_live">
+                                    <a href="{{ url('rental_list')}}/{{$name='ペットも同居'}}/{{$cat='pets_live'}}">
                                     <img src="images/sub/03.png" class="img-responsive"/>
                                     <h4 style="color: #009966; font-weight: bold;">ペットも同居</h4>
                                     </a>
                                 </div>
     
                                 <div id="img4" class="col-md-2 col-sm-6 col-xs-12" id="p4">
-                                        <a href="rental_list.php?name=敷金ゼロ・フリーレント&cat=deposit">
+                                        <a href="{{ url('rental_list')}}/{{$name='敷金ゼロ・フリーレント'}}/{{$cat='deposit'}}">
                                     <img src="images/sub/04.png" class="img-responsive"/>
                                     <h4 style="color: #009966; font-weight: bold;">礼金０円</h4>
                                     </a>
                                 </div>
     
                                 <div id="img5" class="col-md-2 col-sm-6 col-xs-12" >
-                                    <a href="rental_list.php?name=事業用・駐車場等&cat=business_prk" >
+                                    <a href="{{ url('rental_list')}}/{{$name='事業用・駐車場等'}}/{{$cat='business_prk'}}" >
                                     <img src="images/sub/01.png" class="img-responsive"/>
                                     <h4 style="color: #009966; font-weight: bold;">事業用・駐車場等</h4>
                                     </a>
