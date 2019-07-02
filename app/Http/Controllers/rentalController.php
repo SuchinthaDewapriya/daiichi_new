@@ -153,4 +153,32 @@ class rentalController extends Controller
         }
         return $sort;
     }
+    public function LocationFilterRent($id)
+    {
+        $location = apartment::where('twon',$id)->where('rent_out',1)->orderby('id','desc')->get();
+        return view('locationFilterRent')->with('id',$id)->with('location',$location);
+    }
+    public function FilterdatalocationRent(Request $request)
+    {
+        if ($request->input('users') == 0) {
+            $sort = apartment::where('twon',$request->input('filterid'))->where('rent_out', 1)->get();
+            return $sort;
+        }
+        if ($request->input('users') == 1) {
+            $sort = apartment::where('twon',$request->input('filterid'))->where('rent_out', 1)->orderby('price','asc')->get();
+            return $sort;
+        }
+        if ($request->input('users') == 2) {
+            $sort = apartment::where('twon',$request->input('filterid'))->where('rent_out', 1)->orderby('price','desc')->get();
+            return $sort;
+        }
+        if ($request->input('users') == 3) {
+            $sort = apartment::where('twon',$request->input('filterid'))->where('rent_out', 1)->orderby('built_years','desc')->get();
+            return $sort;
+        }
+        if ($request->input('users') == 4) {
+            $sort = apartment::where('twon',$request->input('filterid'))->where('rent_out', 1)->orderby('built_years','asc')->get();
+            return $sort;
+        }
+    }
 }

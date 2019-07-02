@@ -128,15 +128,15 @@
                             <div style="background-image: url(images/rent_map1.png); margin-left: 120px; height: 140px; margin-top: 30px; background-repeat: no-repeat;" align="center">
                     
                                 <label style="padding-top: 20px; margin-left: -180px;">
-                                    <a href="location_filtersale/location_2.php?col=twon&name=twn7; ?>&db=apartment" target="_blank" style="text-decoration: none;color: #000000;">酒々井エリア</a> 
+                                    <a href="{{ url('locationFilter-rent')}}/{{$id='酒々井エリア'}}" target="_blank" style="text-decoration: none;color: #000000;">酒々井エリア</a> 
                                 </label>
                                 <br><br> 
                                 <span style="margin-left: -220px;">
-                                    <b><a href="location_filtersale/location_2.php?col=twon&name=$twn8; ?>&db=apartment" target="_blank" style="text-decoration: none;color: #000000;">佐倉エリア</a></b>
+                                    <b><a href="{{ url('locationFilter-rent')}}/{{$id='酒々井エリア'}}" target="_blank" style="text-decoration: none;color: #000000;">佐倉エリア</a></b>
                                 </span>
                                 <br><br>
                                 <p style="margin-left: 70px;"><b>
-                                    <a href="location_filtersale/location_2.php?col=twon&name=php echo $twn9; ?>&db=apartment" target="_blank" style="text-decoration: none;color: #000000;">その他エリア </a> </b>
+                                    <a href="{{ url('locationFilter-rent')}}/{{$id='その他エリア'}}" target="_blank" style="text-decoration: none;color: #000000;">その他エリア </a> </b>
                                 </p>
                             </div>
                             <br>

@@ -99,5 +99,7 @@ Route::post('filterLocationRental', 'frontendController@filterLocationRental');
 //Rental Routes
 Route::get('rental_list/{name}/{cat}', 'rentalController@RentalList');
 Route::post('filterdatarental', 'rentalController@FilterdataRental'); 
+Route::get('locationFilter-rent/{id}', 'rentalController@LocationFilterRent');
+Route::post('filterdatalocationrent', 'rentalController@FilterdatalocationRent');
 
 
