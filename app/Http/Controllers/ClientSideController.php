@@ -34,7 +34,7 @@ class ClientSideController extends Controller
 
     // get all sales data
     public function allsaleapartment() {
-        $dataset = sale::all();
+        $dataset = sale::paginate(8);
         return view('all_saleapartment', compact('dataset'));
     }
 
@@ -42,7 +42,7 @@ class ClientSideController extends Controller
     public function allrentapartment() {
         // $apartment_data = apartment::all();  
         // $apartment_data = apartment::take(5)->get();
-        $apartment_data = apartment::where('page_display', '表示する')->where('rent_out', 1)->orderby('id','desc')->paginate(4);
+        $apartment_data = apartment::where('page_display', '表示する')->where('rent_out', 1)->orderby('id','desc')->paginate(8);
 
         return view('all_rentapartment', compact('apartment_data')); 
     }

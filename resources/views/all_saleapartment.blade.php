@@ -10,7 +10,7 @@
 
         <div class="container-edit">
 
-            <br><br><br><br><br>
+            <br>
             <ol class="breadcrumb" style="background: #fff;">
                 <li><a href="http://www.daiichihome.com/">ホーム</a></li>
                 <li class="active">すべての売買物件</li>
@@ -89,6 +89,7 @@
                             </div>     
                             @endforeach                                
                         </div>
+                        {{$dataset->links()}}
                     </td>
                 </tr>
             </table>
@@ -118,6 +119,7 @@
                         </div> 
                         @endforeach
                     </div>
+                    {{$dataset->links()}}
                 </td>
                 </tr>
             </table>
