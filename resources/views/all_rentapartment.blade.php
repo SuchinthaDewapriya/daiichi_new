@@ -92,6 +92,7 @@
                                 </div>
                                 @endforeach
                             </div>
+                            {{$apartment_data->links()}}
                         </td></tr>
                     </table>
                 </div>
