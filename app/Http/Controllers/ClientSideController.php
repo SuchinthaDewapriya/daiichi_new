@@ -40,7 +40,10 @@ class ClientSideController extends Controller
 
     //get all apartment data
     public function allrentapartment() {
-        $apartment_data = apartment::all();  
-        return $apartment_data;  
+        // $apartment_data = apartment::all();  
+        // $apartment_data = apartment::take(5)->get();
+        $apartment_data = apartment::where('page_display', '表示する')->where('rent_out', 1)->orderby('id','desc')->paginate(4);
+
+        return view('all_rentapartment', compact('apartment_data')); 
     }
 }

@@ -1,5 +1,8 @@
+@extends('layouts.main')
 
-    <body oncontextmenu="return false" id="body">
+@section('content')
+    
+<body oncontextmenu="return false" id="body">
    
         <div style="margin-top: 200px;"></div>
 
@@ -67,25 +70,27 @@
                     <table>
                         <tr><td >
                             <div class="row">
-                                <div class="col-xs-12 col-md-3 col-sm-6" style="margin-bottom:15px;">  
-                                    <a href="details2.php?id=<?php echo $row1['id']; ?>" class="thumbnail" style="text-decoration: none;"/>
-                                        <img src="photos/' . $row1['img1'] . '">
+                                @foreach ($apartment_data as $data)
+                                    <div class="col-xs-12 col-md-3 col-sm-6" style="margin-bottom:15px;">  
+                                    <a href="{{url('/ApartmentViewData')}}/{{$data->id}}" class="thumbnail" style="text-decoration: none;"/>
+                                        <img src="{{asset('images/photos')}}/{{$data->img1}}">
                                         <div class="caption">
-                                            <h5><span style="color:#FF0000; font-size: 15px;">' . $row1['flag_display'] . '</span></h5>
-                                            <h5><span style="color:#eea236;  font-size: 15px;">' . $row1['property_type'] . '</span></h5>
-                                            <h5><span style=" font-size: 15px;">' . $row1['property_name'] . ' /</span></h5>
-                                            <h5 style="font-size: 15px;"><span style=" font-size: 15px;">' . $row1['room_no'] . '</span></h5>
+                                            <h5><span style="color:#FF0000; font-size: 15px;">{{$data->flag_display}}</span></h5>
+                                            <h5><span style="color:#eea236;  font-size: 15px;">{{$data->property_type}}</span></h5>
+                                            <h5><span style=" font-size: 15px;">{{$data->property_name}}</span></h5>
+                                            <h5 style="font-size: 15px;"><span style=" font-size: 15px;">{{$data->room_no}}</span></h5>
                                             <h5  style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;"> [間取り]</span></h5>
-                                            <h5  style="font-size: 15px;">'. ' ' . $row1['floor_type'] . ' / ' . $row1['occupied_area'] . '</h5>
+                                            <h5  style="font-size: 15px;">{{$data->floor_type}} / {{$data->occupied_area}}</h5>
                                             <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[賃料]</span></h5>
-                                            <h5 style="font-size: 15px;">'. ' <span style="color:#FF0000; font-size: 15px;"> ' . number_format($row1['price']) . '</span></h5>
+                                            <h5 style="font-size: 15px;">'. ' <span style="color:#FF0000; font-size: 15px;">{{$data->price}}</span></h5>
                                             <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[住所]</span></h5>
-                                            <h5 style="font-size: 15px;"> ' . $row1['location'] . '</h5>
+                                            <h5 style="font-size: 15px;">{{$data->location}}</h5>
                                             <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[最寄り駅]</span></h5>
-                                            <h5 style="font-size: 15px;">' . $row1['nearst_station'] .</h5>
+                                            <h5 style="font-size: 15px;">{{$data->nearst_station}}</h5>
                                         </div>
                                     </a>
                                 </div>
+                                @endforeach
                             </div>
                         </td></tr>
                     </table>
@@ -98,21 +103,25 @@
                 <table width="100%"><tr>
                 <td >
                 <div class="row">
-                    <div class="col-xs-12 col-md-3 col-sm-6" style="margin-bottom:15px;">
-                    <a href="details2.php?id=<?php echo $row['id']; ?>" class="thumbnail" style="text-decoration: none;"/>
-                    <img src="photos/' . $row['img1'] . '">
-                    <div class="caption">
-                    <h5><span style="color:#FF0000; font-size: 15px;">' . $row['flag_display'] . '</span>
-                    <h5><span style="color:#eea236; margin-left:10px; font-size: 15px;">' . $row['property_type'] . '</span></h5>
-                    <h5><span style=" font-size: 15px;">' . $row['property_name'] . ' / ' . $row['room_no'] . '</span></h5>
-                    <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[間取り]</span>&nbsp;  ' . $row['floor_type'] . ' / ' . $row['occupied_area'] . '</h5>
-                    <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[賃料]</span> &nbsp;<span style="color:#FF0000; font-size: 15px;"> ' . number_format($row['price']) . '</span></h5>
-                    <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[住所]</span> &nbsp;   ' . $row['location'] . '</h5>
-                    <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[最寄り駅] </span>&nbsp; ' . $row['nearst_station'] . '</h5>
-                    </div>
-                    </a>
-                    </div>
+                    @foreach ($apartment_data as $data)
+                        <div class="col-xs-6 col-md-3 col-sm-3" style="margin-bottom:15px;">
+                            <a href="{{url('/ApartmentViewData')}}/{{$data->id}}" class="thumbnail" style="text-decoration: none;"/>
+                            <img src="{{asset('images/photos')}}/{{$data->img1}}">
+                            <div class="caption">
+                            <h5><span style="color:#FF0000; font-size: 15px;">{{$data->flag_display}}</span>
+                            <h5><span style="color:#eea236; margin-left:10px; font-size: 15px;">{{$data->property_type}}</span></h5>
+                            <h5><span style=" font-size: 15px;">{{$data->property_name}} / {{$data->room_no}}</span></h5>
+                            <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[間取り]</span>&nbsp;  {{$data->floor_type}} / {{$data->occupied_area}}</h5>
+                            <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[賃料]</span> &nbsp;<span style="color:#FF0000; font-size: 15px;"> {{$data->price}}</span></h5>
+                            <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[住所]</span> &nbsp;   {{$data->location}}</h5>
+                            <h5 style="font-size: 15px;"><span style="color:#337AB7; font-size: 15px;">[最寄り駅] </span>&nbsp; {{$data->nearst_station}}</h5>
+                            </div>
+                            </a>
+                        </div>    
+                    @endforeach
+                    
                 </div>
+                {{$apartment_data->links()}}
                 </td>
                 </tr></table>
                 </div>
@@ -122,3 +131,5 @@
 
     
 
+
+@endsection

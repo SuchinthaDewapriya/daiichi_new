@@ -229,6 +229,7 @@
             </div>    
             @endforeach
         </div>
+        <br><br>
         <div class="container-edit">
             <a href="{{url('/all_rentapartment')}}"><h4 align="right">See more >></h4></a>
         </div>
