@@ -83,7 +83,7 @@ Route::get('newsEdit/{id}', 'HomeController@NewsEdit');
 Route::get('addnewNews', 'HomeController@addnewNews'); 
 Route::post('submitNewNews', 'HomeController@submitNewNews'); 
 Route::get('deleteNews/{id}', 'HomeController@deleteNews'); 
-Route::post('updateNews/{id}', 'HomeController@updateNews'); 
+Route::post('updateNews/{id}', 'HomeController@updateNews');  
 
 //Sale Routes
 Route::get('sale-mansion/{name}/{name1}', 'saleController@saleMansion');
@@ -95,4 +95,9 @@ Route::post('filterdatalocation', 'saleController@Filterdatalocation');
 Route::post('filterdatamansion', 'frontendController@FilterdataMansion'); 
 Route::post('filterdatarental', 'frontendController@FilterdataRental'); 
 Route::post('filterLocationRental', 'frontendController@filterLocationRental');
+
+//Rental Routes
+Route::get('rental_list/{name}/{cat}', 'rentalController@RentalList');
+Route::post('filterdatarental', 'rentalController@FilterdataRental'); 
+
 
