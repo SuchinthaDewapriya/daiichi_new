@@ -78,10 +78,10 @@ document.onkeydown = function(e) {
 
 <body>
 
-    <div style="background-image: url(images/image/logbg.jpg); width: 100%;
+    <div style="background-image: url({{ asset('images/image/logbg.jpg')}}); width: 100%;
       height: 100%; position: fixed; background-size:cover;">
 
-     <div class="container-edit-fluid img-responsive" style="background-image: url(images/image/bg.png); width: 100%;
+     <div class="container-edit-fluid img-responsive" style="background-image: url({{ asset('images/image/bg.png')}}); width: 100%;
           height: 100%; position: absolute; background-size:cover;">
          <div class="col-sm-4" style="margin-top: 65px;">
              <style>
@@ -159,7 +159,7 @@ form{border: none;}
 <form method="POST" action="{{ route('login') }}">
         @csrf
   <div class="imgcontainer">
-      <img src="images/image/img_avatar3.png" alt="Avatar" class="avatar">
+      <img src="{{ asset('images/image/img_avatar3.png')}}" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
@@ -235,7 +235,7 @@ form{border: none;}
                 $(".btn-refresh").click(function () {
                    $.ajax({
                        type: 'GET',
-                       url: 'refresh_captcha',
+                       url: '{{ url('refresh_captcha')}}',
                        success:function (data){
                            $(".captcha span").html(data.captcha);
                        }

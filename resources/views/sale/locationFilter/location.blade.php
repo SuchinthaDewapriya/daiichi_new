@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('pageTitle', 'Seiki=bill - Detached')
 @section('content')
 
@@ -65,7 +65,7 @@
 
              <a href="{{ url('mansion-detail')}}/{{$item->id}}" class="thumbnail" style="text-decoration: none;"/>
 
-         <img src="{{ asset('public/images/salephotos')}}/{{$item->img1}}">
+         <img src="{{ asset('images/salephotos')}}/{{$item->img1}}">
         <div class="caption">
 
           <h5 style="margin-bottom:15px;"><span style="color:#FF0000; font-size: 15px;">{{$item->flag_display}}</span>
@@ -124,7 +124,7 @@
 
       @foreach($location as $item)
       <tr style="color: #CC0000;" >
-          <td scope="row"><a href="{{ url('mansion-detail')}}/{{$item->id}}"><img src="{{ asset('public/images/salephotos')}}/{{$item->img1}}" class="img-responsive" width="150px" height="50px"/></a></td>
+          <td scope="row"><a href="{{ url('mansion-detail')}}/{{$item->id}}"><img src="{{ asset('images/salephotos')}}/{{$item->img1}}" class="img-responsive" width="150px" height="50px"/></a></td>
 
           <td class="data_box" style="padding-top:40px;"><span><?php echo $item->property_type;  ?></span></td>
           <td class="data_box" style="padding-top:40px;"><span><?php echo $item->location;  ?></span></td>
@@ -182,7 +182,7 @@
                   building_area = v.building_area + '㎡'
                 }
                 $("#tbody").append("<tr style='color: #CC0000;'><td scope='row'><a href='{{url('mansion-detail')}}/"
-                +v.id+"'><img src='../public/images/salephotos/"
+                +v.id+"'><img src='../images/salephotos/"
                 +v.img1+"' class='img-responsive' width='150px' height='50px'/></a></td><td class='data_box' style='padding-top:40px;'><span>"
                 +v.nearst_station+"</span></td><td class='data_box' style='padding-top:40px;'><span>"
                 +v.property_type+"</span></td><td class='data_box' style='padding-top:40px;'><span>"
@@ -209,7 +209,7 @@
                         building_area = v.building_area + '㎡'
                       }
                       $("#mobfilter").append("<div class='col-xs-6 col-md-3 col-sm-3' style='margin-bottom:15px;'><a class='thumbnail' href='{{url('mansion-detail')}}/"
-                      +v.id+" style='text-decoration: none;'><img src='../public/images/salephotos/"
+                      +v.id+" style='text-decoration: none;'><img src='../images/salephotos/"
                       +v.img1+"'><div class='caption'><h5 style='margin-bottom:15px;'><span style='color:#FF0000; font-size: 15px;'>"
                       +v.flag_display+"</span></h5><h5 style='margin-bottom:15px;'><span style='color:#eea236;  font-size: 15px;'>"
                       +v.property_type+"</span></h5><h5 style='font-size: 15px;'><span style='color:#337AB7; font-size: 15px;'>[間取り]</span></h5><h5 style='font-size: 15px;'>"
