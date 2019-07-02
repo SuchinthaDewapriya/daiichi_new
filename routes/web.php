@@ -53,6 +53,9 @@ Route::post('/inquireData', 'EmailController@inquireData');
 Route::post('/saleData', 'EmailController@saleData');
 Route::post('/apartmentData', 'EmailController@apartmentData');
 
+// all sales and apartment 
+Route::get('/all_saleapartment', 'ClientSideController@allsaleapartment');
+Route::get('/all_rentapartment', 'ClientSideController@allrentapartment');
 
 
 

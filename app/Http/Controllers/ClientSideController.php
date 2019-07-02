@@ -31,4 +31,16 @@ class ClientSideController extends Controller
         $apartmentdata = apartment::find($id);
         return view('apartment-details', compact('apartmentdata'))->with('id', $id);
     }
+
+    // get all sales data
+    public function allsaleapartment() {
+        $dataset = sale::all();
+        return view('all_saleapartment', compact('dataset'));
+    }
+
+    //get all apartment data
+    public function allrentapartment() {
+        $apartment_data = apartment::all();  
+        return $apartment_data;  
+    }
 }
