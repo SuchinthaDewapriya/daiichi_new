@@ -21,6 +21,12 @@ class ClientSideController extends Controller
     }
 
     //sales view data one by one
+
+
+
+
+
+    
     public function SalesViewData($id) {
     $saledata = sale::find($id);
     return view('salesdetails', compact('saledata'))->with('id', $id);
